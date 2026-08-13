@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashwin Aster | Software Architect & AI Engineer</title>
+    <title>MUHAMMED FAHEEM | AI • Automation • Systems</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-primary: #050505;
-            --bg-secondary: #0a0a0a;
-            --bg-tertiary: #0f0f0f;
-            --bg-card: #080808;
-            --accent-primary: #10b981;
-            --accent-glow: #059669;
-            --accent-secondary: #06b6d4;
-            --accent-tertiary: #8b5cf6;
-            --accent-warning: #f59e0b;
-            --text-primary: #e5e5e5;
-            --text-secondary: #737373;
-            --text-muted: #404040;
-            --border-color: #1a1a1a;
-            --border-hover: #262626;
+            --bg-primary: #030711;
+            --bg-secondary: #070d18;
+            --bg-tertiary: #0b1220;
+            --bg-card: rgba(8, 15, 28, 0.78);
+            --accent-primary: #22d3ee;
+            --accent-glow: #0ea5e9;
+            --accent-secondary: #60a5fa;
+            --accent-tertiary: #a855f7;
+            --accent-warning: #facc15;
+            --text-primary: #f4f7fb;
+            --text-secondary: #94a3b8;
+            --text-muted: #475569;
+            --border-color: rgba(148, 163, 184, 0.16);
+            --border-hover: rgba(96, 165, 250, 0.45);
         }
 
         * {
@@ -453,6 +453,306 @@
             transform: translateY(-2px);
         }
 
+
+        /* Image-inspired Hero Visual */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+            align-items: center;
+            gap: 4rem;
+            position: relative;
+            padding: 7rem 4rem 3rem;
+            z-index: 10;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            width: 100%;
+        }
+
+        .hero-name {
+            font-size: clamp(4rem, 8vw, 7.5rem);
+            letter-spacing: -5px;
+            background: linear-gradient(100deg, #f8fafc 5%, #22d3ee 48%, #a855f7 95%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-name .outline-text {
+            -webkit-text-stroke: 1px rgba(148,163,184,.5);
+            color: transparent;
+            background: none;
+        }
+
+        .hero-name .accent {
+            color: var(--accent-tertiary);
+            -webkit-text-fill-color: var(--accent-tertiary);
+        }
+
+        .hero-title {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+        }
+
+        .hero-desc {
+            max-width: 620px;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 600px;
+            display: grid;
+            place-items: center;
+        }
+
+        .hero-orbit {
+            position: absolute;
+            width: min(42vw, 520px);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 35% 30%, rgba(34,211,238,.34), transparent 34%),
+                radial-gradient(circle at 70% 70%, rgba(168,85,247,.36), transparent 40%),
+                linear-gradient(135deg, rgba(14,165,233,.18), rgba(168,85,247,.18));
+            filter: blur(.2px);
+            box-shadow:
+                0 0 90px rgba(34,211,238,.12),
+                0 0 130px rgba(168,85,247,.10);
+        }
+
+        .hero-orbit::before,
+        .hero-orbit::after {
+            content: '';
+            position: absolute;
+            inset: -28px;
+            border: 1px solid rgba(96,165,250,.18);
+            border-radius: 50%;
+            transform: rotate(-18deg);
+        }
+
+        .hero-orbit::after {
+            inset: -55px;
+            border-color: rgba(168,85,247,.12);
+            transform: rotate(24deg);
+        }
+
+        .hero-avatar {
+            position: relative;
+            width: min(27vw, 330px);
+            aspect-ratio: 1 / 1.15;
+            border-radius: 48% 48% 42% 42%;
+            background:
+                radial-gradient(circle at 50% 22%, rgba(255,255,255,.18), transparent 12%),
+                linear-gradient(145deg, #111827 0%, #0f172a 45%, #050914 100%);
+            border: 1px solid rgba(148,163,184,.18);
+            box-shadow: 0 35px 100px rgba(0,0,0,.5);
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .hero-avatar::before {
+            content: 'S';
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            padding-bottom: 24px;
+            font-size: clamp(7rem, 13vw, 12rem);
+            font-weight: 900;
+            letter-spacing: -12px;
+            color: rgba(255,255,255,.92);
+            text-shadow: 0 0 45px rgba(34,211,238,.22);
+        }
+
+        .hero-avatar::after {
+            content: 'AI  •  SYSTEMS  •  AUTOMATION';
+            position: absolute;
+            bottom: 24px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: .55rem;
+            letter-spacing: 2px;
+            color: rgba(148,163,184,.72);
+        }
+
+        .code-window {
+            position: absolute;
+            right: -15px;
+            bottom: 48px;
+            width: min(390px, 85%);
+            background: rgba(3,7,17,.9);
+            border: 1px solid rgba(96,165,250,.28);
+            border-radius: 14px;
+            box-shadow: 0 25px 70px rgba(0,0,0,.55), 0 0 35px rgba(34,211,238,.08);
+            overflow: hidden;
+            z-index: 4;
+            backdrop-filter: blur(18px);
+        }
+
+        .code-window-header {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(15,23,42,.7);
+        }
+
+        .code-window-header span:not(.window-dot) {
+            margin-left: auto;
+            margin-right: auto;
+            font: 500 .65rem 'JetBrains Mono', monospace;
+            color: var(--text-muted);
+        }
+
+        .window-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #334155;
+        }
+
+        .window-dot:nth-child(1) { background: #fb7185; }
+        .window-dot:nth-child(2) { background: #facc15; }
+        .window-dot:nth-child(3) { background: #34d399; }
+
+        .code-window-body {
+            padding: 18px 20px 20px;
+            font: 500 .72rem/1.9 'JetBrains Mono', monospace;
+            color: #cbd5e1;
+        }
+
+        .code-window-body .prompt { color: var(--accent-primary); }
+        .code-window-body .keyword { color: #c084fc; }
+        .code-window-body .string { color: #67e8f9; }
+        .code-window-body .comment { color: #64748b; }
+
+        .floating-chip {
+            position: absolute;
+            z-index: 5;
+            padding: .6rem .85rem;
+            border: 1px solid rgba(148,163,184,.16);
+            background: rgba(8,15,28,.72);
+            border-radius: 999px;
+            backdrop-filter: blur(12px);
+            font: 600 .62rem 'JetBrains Mono', monospace;
+            color: #cbd5e1;
+            box-shadow: 0 12px 35px rgba(0,0,0,.25);
+        }
+
+        .chip-ai { top: 16%; right: 3%; color: #67e8f9; }
+        .chip-auto { top: 34%; left: 2%; color: #a78bfa; }
+        .chip-build { bottom: 18%; left: 7%; color: #facc15; }
+
+        .hero-quick-links {
+            display: flex;
+            gap: .75rem;
+            margin-top: 1.5rem;
+        }
+
+        .hero-quick-link {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            transition: .3s ease;
+        }
+
+        .hero-quick-link:hover {
+            color: var(--accent-primary);
+            border-color: rgba(34,211,238,.45);
+            transform: translateY(-3px);
+        }
+
+        /* Compact metrics from the reference design */
+        .hero-metrics {
+            display: flex;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+        }
+
+        /* Make cards feel like the reference image */
+        .skill-card,
+        .project-card {
+            border-radius: 14px;
+            background: linear-gradient(145deg, rgba(10,18,32,.86), rgba(5,10,20,.72));
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
+        }
+
+        .skill-card::after,
+        .project-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(circle at 80% 0%, rgba(34,211,238,.06), transparent 30%);
+        }
+
+        .skill-card:hover,
+        .project-card:hover {
+            border-color: rgba(96,165,250,.35);
+            box-shadow: 0 20px 60px rgba(0,0,0,.22);
+        }
+
+        .section {
+            padding: 8rem 4rem;
+        }
+
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 8rem;
+            }
+            .hero-visual {
+                min-height: 500px;
+            }
+            .hero-avatar {
+                width: min(55vw, 330px);
+            }
+            .hero-orbit {
+                width: min(75vw, 500px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 7rem 1.5rem 3rem;
+                gap: 1rem;
+            }
+            .hero-visual {
+                min-height: 430px;
+            }
+            .code-window {
+                right: 0;
+                bottom: 20px;
+            }
+            .floating-chip {
+                display: none;
+            }
+            .hero-metrics {
+                gap: 1.25rem;
+            }
+            .hero-quick-links {
+                margin-bottom: 1rem;
+            }
+        }
+
         /* Scroll Indicator */
         .scroll-indicator {
             position: absolute;
@@ -866,7 +1166,7 @@
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             max-width: 1400px;
             margin: 0 auto;
@@ -993,6 +1293,24 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.65rem;
             color: var(--text-muted);
+        }
+
+
+        .project-image-container {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(34,211,238,.14), transparent 30%),
+                radial-gradient(circle at 80% 80%, rgba(168,85,247,.14), transparent 35%),
+                #070d18;
+        }
+
+        .project-image i {
+            font-size: 3.2rem;
+            color: rgba(96,165,250,.65);
+            text-shadow: 0 0 30px rgba(34,211,238,.18);
+        }
+
+        .project-category {
+            color: #67e8f9;
         }
 
         /* Experience Section */
@@ -1314,7 +1632,7 @@
             }
 
             .projects-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .navbar {
@@ -1341,6 +1659,10 @@
             }
 
             .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1374,7 +1696,7 @@
 <body>
     <!-- Loading Screen -->
     <div class="loader" id="loader">
-        <div class="loader-logo">ASHWIN.DEV</div>
+        <div class="loader-logo">FAHEEM.MUHAMMED</div>
         <div class="loader-bar">
             <div class="loader-progress"></div>
         </div>
@@ -1396,7 +1718,7 @@
         <div class="flex justify-between items-center w-full">
             <a href="#" class="nav-logo">
                 <span class="nav-logo-icon">A</span>
-                ashwin.dev
+                FAHEEM.MUHAMMED
             </a>
             <div class="hidden lg:flex gap-10 nav-links">
                 <a href="#about" class="nav-link">About</a>
@@ -1415,48 +1737,83 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="hero-eyebrow reveal">Software Architect & AI Engineer</div>
+            <div class="hero-eyebrow reveal">AI • Automation • Systems</div>
+
             <h1 class="hero-name reveal">
-                <span>Ashwin</span><br>
-                <span class="outline-text">Aster</span><span class="accent">.</span>
+                <span>Sakamaro</span><br>
+                <span class="outline-text">Builder</span><span class="accent">.</span>
             </h1>
+
             <div class="hero-title reveal">
                 <span id="typed-text"></span>
                 <span class="cursor-line"></span>
             </div>
+
             <p class="hero-desc reveal">
-                I architect <strong>intelligent systems</strong> and build production-grade 
-                <strong>AI solutions</strong>. Specialized in machine learning infrastructure, 
-                autonomous agents, and transforming complex algorithms into scalable products.
+                I turn <strong>ideas into working systems</strong> — combining AI,
+                automation, backend engineering and relentless curiosity to build
+                things that are useful in the real world.
             </p>
-            <div class="hero-metrics reveal">
-                <div class="metric">
-                    <div class="metric-value"><span data-count="50">0</span><span class="suffix">+</span></div>
-                    <div class="metric-label">Projects Shipped</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value"><span data-count="5">0</span><span class="suffix">YRS</span></div>
-                    <div class="metric-label">Experience</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value"><span data-count="20">0</span><span class="suffix">+</span></div>
-                    <div class="metric-label">AI Models Live</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value"><span data-count="10">0</span><span class="suffix">M+</span></div>
-                    <div class="metric-label">API Calls/Day</div>
-                </div>
-            </div>
+
             <div class="hero-actions reveal">
                 <a href="#projects" class="btn-primary magnetic">
-                    <span>View Work</span>
+                    <span>View My Work</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="#contact" class="btn-secondary magnetic">
-                    <span>Get in Touch</span>
+                    <span>Let's Connect</span>
+                    <i class="fas fa-arrow-up-right-from-square"></i>
                 </a>
             </div>
+
+            <div class="hero-quick-links reveal">
+                <a href="#" class="hero-quick-link magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="hero-quick-link magnetic" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hero-quick-link magnetic" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="hero-quick-link magnetic" aria-label="Resume"><i class="fas fa-file-arrow-down"></i></a>
+            </div>
+
+            <div class="hero-metrics reveal">
+                <div class="metric">
+                    <div class="metric-value">AI</div>
+                    <div class="metric-label">Intelligence</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">∞</div>
+                    <div class="metric-label">Curiosity</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">1→0</div>
+                    <div class="metric-label">Idea → System</div>
+                </div>
+            </div>
         </div>
+
+        <div class="hero-visual reveal-right">
+            <div class="hero-orbit"></div>
+            <div class="floating-chip chip-ai">◈ LLMs</div>
+            <div class="floating-chip chip-auto">⚙ AUTOMATION</div>
+            <div class="floating-chip chip-build">✦ BUILD / SHIP</div>
+
+            <div class="hero-avatar" aria-label="Sakamaro visual"></div>
+
+            <div class="code-window">
+                <div class="code-window-header">
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span>sakamaro@dev ~ /portfolio</span>
+                </div>
+                <div class="code-window-body">
+                    <div><span class="prompt">›</span> <span class="keyword">from</span> ideas <span class="keyword">import</span> build</div>
+                    <div><span class="prompt">›</span> build(<span class="string">"something useful"</span>)</div>
+                    <div class="comment"># learn → break → debug → ship</div>
+                    <div><span class="prompt">›</span> system.status()</div>
+                    <div><span class="string">"building..."</span> <span class="prompt">▌</span></div>
+                </div>
+            </div>
+        </div>
+
         <div class="scroll-indicator">
             <div class="scroll-line"></div>
             <span class="scroll-text">Scroll</span>
@@ -1469,62 +1826,77 @@
             <div class="section-header reveal">
                 <div>
                     <div class="section-label">01 — About</div>
-                    <h2 class="section-title">Building the<br>Future of AI</h2>
+                    <h2 class="section-title">A little<br>about me</h2>
                 </div>
                 <div class="section-count">[ 01 / 05 ]</div>
             </div>
+
             <div class="about-grid">
                 <div class="about-image-container reveal-left">
                     <div class="about-image">
-                        <div class="about-image-text">// ASHWIN ASTER</div>
+                        <div class="about-image-text">// SAKAMARO / BUILDER</div>
                     </div>
                     <div class="about-decoration"></div>
+
                     <div class="terminal">
                         <div class="terminal-header">
                             <span class="terminal-dot red"></span>
                             <span class="terminal-dot yellow"></span>
                             <span class="terminal-dot green"></span>
-                            <span class="terminal-title">ashwin@dev ~ /about</span>
+                            <span class="terminal-title">sakamaro@dev ~ /about</span>
                         </div>
                         <div class="terminal-body">
                             <div class="terminal-line">
                                 <span class="terminal-prompt">→</span>
                                 <span class="terminal-command">whoami</span>
                             </div>
-                            <div class="terminal-output">AI Engineer | System Architect</div>
+                            <div class="terminal-output">Builder | AI | Automation | Systems</div>
+
                             <div class="terminal-line" style="margin-top: 10px;">
                                 <span class="terminal-prompt">→</span>
-                                <span class="terminal-command">cat expertise.txt</span>
+                                <span class="terminal-command">cat mindset.txt</span>
                             </div>
                             <div class="terminal-output">
-                                Machine Learning, Deep Learning,<br>
-                                AI Agents, LLMs, MLOps, DevOps,<br>
-                                System Design, DSA, Cloud Architecture
+                                Understand the machine.<br>
+                                Build the thing.<br>
+                                Break it. Fix it. Ship it.
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="about-content reveal-right">
-                    <h3>Transforming Ideas into Intelligent Systems</h3>
+                    <h3>I don't just learn tools. I take systems apart.</h3>
                     <p>
-                        I'm a <span class="highlight">Software Architect</span> and <span class="highlight">AI Engineer</span> 
-                        with deep expertise in building intelligent systems that operate at scale. My work sits at the 
-                        intersection of cutting-edge machine learning research and robust software engineering practices.
+                        My sweet spot is the intersection of <span class="highlight">AI, automation,
+                        software engineering and problem solving</span>. I like understanding what
+                        happens underneath the abstraction — then using that understanding to build something real.
                     </p>
                     <p>
-                        With a strong foundation in <span class="highlight">Data Structures & Algorithms</span>, I approach 
-                        every problem with optimization and elegance in mind. Whether designing distributed ML pipelines or 
-                        crafting autonomous AI agents, I ensure every solution is production-ready.
+                        Whether it's an LLM workflow, an automation pipeline, a test framework or an algorithm,
+                        I learn fastest by <span class="highlight">building, breaking and debugging</span>.
                     </p>
-                    <p>
-                        My expertise spans the complete lifecycle of AI product development—from research prototypes 
-                        to production systems serving millions of users globally.
-                    </p>
+
                     <div class="about-list">
-                        <div class="about-list-item">Building autonomous AI agents with multi-step reasoning</div>
-                        <div class="about-list-item">Designing scalable ML infrastructure on cloud platforms</div>
-                        <div class="about-list-item">Implementing RAG systems and vector search solutions</div>
-                        <div class="about-list-item">Optimizing model inference for real-time applications</div>
+                        <div class="about-list-item">AI & LLM integrations</div>
+                        <div class="about-list-item">Automation & test engineering</div>
+                        <div class="about-list-item">Backend systems & APIs</div>
+                        <div class="about-list-item">Algorithms, debugging & system thinking</div>
+                    </div>
+
+                    <div class="hero-metrics" style="margin-top: 2rem;">
+                        <div class="metric">
+                            <div class="metric-value">AI</div>
+                            <div class="metric-label">Build</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">QA</div>
+                            <div class="metric-label">Automate</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">∞</div>
+                            <div class="metric-label">Learn</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1545,8 +1917,8 @@
                 <div class="skill-card reveal">
                     <div class="skill-number">01</div>
                     <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                    <h3 class="skill-title">AI & Machine Learning</h3>
-                    <p class="skill-desc">Deep expertise in neural networks, transformers, and building production ML systems.</p>
+                    <h3 class="skill-title">AI & LLM Integration</h3>
+                    <p class="skill-desc">Building AI-powered applications with APIs, models and practical workflows.</p>
                     <div class="skill-tags">
                         <span class="skill-tag">TensorFlow</span>
                         <span class="skill-tag">PyTorch</span>
@@ -1557,8 +1929,8 @@
                 <div class="skill-card reveal">
                     <div class="skill-number">02</div>
                     <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                    <h3 class="skill-title">AI Agents & LLMs</h3>
-                    <p class="skill-desc">Building autonomous agents with reasoning, planning, and tool-use capabilities.</p>
+                    <h3 class="skill-title">Automation & Testing</h3>
+                    <p class="skill-desc">Automating workflows and testing systems with Selenium, Cypress and code.</p>
                     <div class="skill-tags">
                         <span class="skill-tag">LangChain</span>
                         <span class="skill-tag">GPT-4</span>
@@ -1569,8 +1941,8 @@
                 <div class="skill-card reveal">
                     <div class="skill-number">03</div>
                     <div class="skill-icon"><i class="fas fa-database"></i></div>
-                    <h3 class="skill-title">Data Science</h3>
-                    <p class="skill-desc">Extracting insights from data and building predictive analytics solutions.</p>
+                    <h3 class="skill-title">Backend Development</h3>
+                    <p class="skill-desc">Building APIs and backend services that connect models, data and products.</p>
                     <div class="skill-tags">
                         <span class="skill-tag">Pandas</span>
                         <span class="skill-tag">NumPy</span>
@@ -1581,8 +1953,8 @@
                 <div class="skill-card reveal">
                     <div class="skill-number">04</div>
                     <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3 class="skill-title">DSA & System Design</h3>
-                    <p class="skill-desc">Strong algorithmic foundation with expertise in designing scalable architectures.</p>
+                    <h3 class="skill-title">System Builder</h3>
+                    <p class="skill-desc">Turning complex problems into clean, understandable system designs.</p>
                     <div class="skill-tags">
                         <span class="skill-tag">Algorithms</span>
                         <span class="skill-tag">System Design</span>
@@ -1592,8 +1964,8 @@
                 <div class="skill-card reveal">
                     <div class="skill-number">05</div>
                     <div class="skill-icon"><i class="fas fa-server"></i></div>
-                    <h3 class="skill-title">MLOps & DevOps</h3>
-                    <p class="skill-desc">End-to-end ML lifecycle management and cloud infrastructure automation.</p>
+                    <h3 class="skill-title">Developer Tooling</h3>
+                    <p class="skill-desc">Creating repeatable development, testing and deployment workflows.</p>
                     <div class="skill-tags">
                         <span class="skill-tag">Docker</span>
                         <span class="skill-tag">Kubernetes</span>
@@ -1604,8 +1976,8 @@
                 <div class="skill-card reveal">
                     <div class="skill-number">06</div>
                     <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                    <h3 class="skill-title">Cloud & Infrastructure</h3>
-                    <p class="skill-desc">Multi-cloud expertise with focus on scalable and cost-efficient solutions.</p>
+                    <h3 class="skill-title">Problem Solving</h3>
+                    <p class="skill-desc">Breaking down hard technical problems until the system makes sense.</p>
                     <div class="skill-tags">
                         <span class="skill-tag">AWS</span>
                         <span class="skill-tag">GCP</span>
@@ -1654,17 +2026,11 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <div class="project-category">AI Agents</div>
-                        <h3 class="project-title">Autonomous Multi-Agent Framework</h3>
-                        <p class="project-desc">Multi-agent orchestration system enabling autonomous task decomposition, planning, and execution with tool integration.</p>
+                        <div class="project-category">LLM Systems</div>
+                        <h3 class="project-title">Maze & Algorithm Visualizer</h3>
+                        <p class="project-desc">Visual experiments for understanding algorithms such as DFS, graph traversal and maze generation.</p>
                         <div class="project-tech">
-                            <span>Python</span>
-                            <span>•</span>
-                            <span>LangChain</span>
-                            <span>•</span>
-                            <span>GPT-4</span>
-                            <span>•</span>
-                            <span>FastAPI</span>
+                            <span>JavaScript</span><span>•</span> <span>Algorithms</span><span>•</span><span>Visualization</span>
                         </div>
                     </div>
                 </div>
@@ -1814,8 +2180,8 @@
                 Whether you have a project in mind or just want to chat about AI and technology — 
                 I'd love to hear from you.
             </p>
-            <a href="mailto:ashwin@example.com" class="contact-email reveal magnetic">
-                ashwin@example.com
+            <a href="mailto:hello@sakamaro.dev" class="contact-email reveal magnetic">
+                hello@sakamaro.dev
             </a>
             <div class="social-links reveal">
                 <a href="https://github.com" target="_blank" class="social-link magnetic"><i class="fab fa-github"></i></a>
@@ -1829,7 +2195,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-text">
-            Designed & Built by <span>Ashwin Aster</span> © 2024
+            Designed & Built by <span>Sakamaro</span> © <span id="year"></span>
         </div>
         <div class="footer-links">
             <a href="#" class="footer-link">Resume</a>
@@ -1839,6 +2205,8 @@
     </footer>
 
     <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
         // ============ LOADER ============
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -2055,11 +2423,11 @@
 
         // ============ TYPING EFFECT ============
         const texts = [
-            'Building AI Agents',
-            'Machine Learning Expert',
-            'Data Science Specialist',
-            'DSA & System Design',
-            'MLOps Practitioner'
+            'Building AI Systems',
+            'Automating Workflows',
+            'Breaking Down Complex Problems',
+            'Learning by Building',
+            'Turning Ideas into Products'
         ];
         let textIndex = 0, charIndex = 0, isDeleting = false;
         const typedElement = document.getElementById('typed-text');
