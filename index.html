@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammed Faheem | AI • Automation • Systems</title>
+    <title>MUHAMMED FAHEEM | AI • Automation • Systems</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@
             background: var(--bg-primary);
             color: var(--text-primary);
             overflow-x: hidden;
-            cursor: none;
+            cursor: auto;
         }
 
         ::selection {
@@ -250,7 +250,7 @@
             height: 6px;
             background: var(--accent-primary);
             border-radius: 50%;
-            animation: pulse 2s infinite;
+            animation: none;
         }
 
         @keyframes pulse {
@@ -326,7 +326,7 @@
             width: 2px;
             height: 1.2em;
             background: var(--accent-primary);
-            animation: blink 1s infinite;
+            animation: none;
             margin-left: 4px;
         }
 
@@ -427,7 +427,7 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
+            transform: none;
             box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
         }
 
@@ -450,7 +450,7 @@
         .btn-secondary:hover {
             border-color: var(--text-secondary);
             color: var(--text-primary);
-            transform: translateY(-2px);
+            transform: none;
         }
 
 
@@ -670,7 +670,7 @@
         .hero-quick-link:hover {
             color: var(--accent-primary);
             border-color: rgba(34,211,238,.45);
-            transform: translateY(-3px);
+            transform: none;
         }
 
         /* Compact metrics from the reference design */
@@ -707,7 +707,7 @@
         .skill-card:hover,
         .project-card:hover {
             border-color: rgba(96,165,250,.35);
-            box-shadow: 0 20px 60px rgba(0,0,0,.22);
+            box-shadow: 0 10px 30px rgba(0,0,0,.16);
         }
 
         .section {
@@ -773,19 +773,7 @@
         }
 
         .scroll-line::after {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background: var(--accent-primary);
-            animation: scrollDown 2s infinite;
-        }
-
-        @keyframes scrollDown {
-            0% { top: -20px; }
-            100% { top: 60px; }
+            content: none;
         }
 
         .scroll-text {
@@ -933,7 +921,7 @@
 
         .about-list-item:hover {
             color: var(--text-primary);
-            transform: translateX(10px);
+            transform: none;
         }
 
         .about-list-item::before {
@@ -1042,7 +1030,7 @@
 
         .skill-card:hover {
             border-color: var(--border-hover);
-            transform: translateY(-5px);
+            transform: none;
         }
 
         .skill-card:hover .skill-number {
@@ -1143,7 +1131,7 @@
 
         .tech-item:hover {
             opacity: 1;
-            transform: translateY(-5px);
+            transform: none;
         }
 
         .tech-item i {
@@ -1177,16 +1165,11 @@
             border: 1px solid var(--border-color);
             position: relative;
             overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .project-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-10px);
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
         .project-card:hover .project-image {
-            transform: scale(1.05);
+            transform: none;
         }
 
         .project-card:hover .project-overlay {
@@ -1204,7 +1187,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease;
+            transition: none;
             background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
             display: flex;
             align-items: center;
@@ -1222,7 +1205,7 @@
             inset: 0;
             background: linear-gradient(to top, rgba(5,5,5,0.95), transparent);
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.2s ease;
             display: flex;
             align-items: flex-end;
             padding: 2rem;
@@ -1313,99 +1296,6 @@
             color: #67e8f9;
         }
 
-        /* Experience Section */
-        .experience-wrapper {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .experience-item {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 4rem;
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: 200px;
-            top: 0;
-            width: 1px;
-            height: 100%;
-            background: var(--border-color);
-        }
-
-        .experience-item::after {
-            content: '';
-            position: absolute;
-            left: 196px;
-            top: 3rem;
-            width: 9px;
-            height: 9px;
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .experience-item:hover::after {
-            border-color: var(--accent-primary);
-            background: var(--accent-primary);
-            box-shadow: 0 0 20px var(--accent-primary);
-        }
-
-        .experience-item:hover {
-            padding-left: 20px;
-        }
-
-        .experience-date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-align: right;
-            padding-right: 2rem;
-        }
-
-        .experience-content h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-company {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--accent-primary);
-            margin-bottom: 1rem;
-        }
-
-        .experience-desc {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            font-size: 0.95rem;
-        }
-
-        .experience-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .experience-tech span {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.65rem;
-            color: var(--accent-secondary);
-            padding: 0.25rem 0.75rem;
-            border: 1px solid var(--accent-secondary);
-            opacity: 0.6;
-        }
-
         /* Contact Section */
         .contact-wrapper {
             max-width: 800px;
@@ -1472,7 +1362,7 @@
         .social-link:hover {
             border-color: var(--accent-primary);
             color: var(--accent-primary);
-            transform: translateY(-5px);
+            transform: none;
         }
 
         /* Footer */
@@ -1516,37 +1406,29 @@
         }
 
         /* Animations */
-        .reveal {
+        .reveal,
+        .reveal-left,
+        .reveal-right {
             opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateY(14px);
+            transition: opacity 0.45s ease, transform 0.45s ease;
         }
 
-        .reveal.visible {
+        .reveal.visible,
+        .reveal-left.visible,
+        .reveal-right.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .reveal-left.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .reveal-right.visible {
-            opacity: 1;
-            transform: translateX(0);
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
         }
 
         /* Loading Screen */
@@ -1585,8 +1467,7 @@
         .loader-progress {
             height: 100%;
             background: var(--accent-primary);
-            width: 0;
-            animation: loading 2.5s ease forwards;
+            width: 100%;
         }
 
         @keyframes loading {
@@ -1614,21 +1495,6 @@
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
-            }
-
-            .experience-item {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .experience-item::before,
-            .experience-item::after {
-                display: none;
-            }
-
-            .experience-date {
-                text-align: left;
-                padding-right: 0;
             }
 
             .projects-grid {
@@ -1703,10 +1569,6 @@
         <div class="loader-text">INITIALIZING</div>
     </div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-dot" id="cursor-dot"></div>
-
     <!-- Background Effects -->
     <canvas id="three-canvas"></canvas>
     <div class="noise-overlay"></div>
@@ -1724,7 +1586,6 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Expertise</a>
                 <a href="#projects" class="nav-link">Work</a>
-                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-status">
@@ -1741,7 +1602,7 @@
 
             <h1 class="hero-name reveal">
                 <span>FAHEEM</span><br>
-                <span class="outline-text">Builder</span><span class="accent">.</span>
+                <span class="outline-text">MUHAMMED</span><span class="accent">.</span>
             </h1>
 
             <div class="hero-title reveal">
@@ -1806,7 +1667,7 @@
                     <span class="window-dot"></span>
                     <span class="window-dot"></span>
                     <span class="window-dot"></span>
-                    <span>sakamaro@dev ~ /portfolio</span>
+                    <span>muhammedfaheem1133@dev ~ /portfolio</span>
                 </div>
                 <div class="code-window-body">
                     <div><span class="prompt">›</span> <span class="keyword">from</span> ideas <span class="keyword">import</span> build</div>
@@ -1838,7 +1699,7 @@
             <div class="about-grid">
                 <div class="about-image-container reveal-left">
                     <div class="about-image">
-                        <div class="about-image-text">// SAKAMARO / BUILDER</div>
+                        <div class="about-image-text">// MUHAMMED / FAHEEM</div>
                     </div>
                     <div class="about-decoration"></div>
 
@@ -1847,14 +1708,14 @@
                             <span class="terminal-dot red"></span>
                             <span class="terminal-dot yellow"></span>
                             <span class="terminal-dot green"></span>
-                            <span class="terminal-title">sakamaro@dev ~ /about</span>
+                            <span class="terminal-title">muhammedfaheem1133@gmail.com ~ /about</span>
                         </div>
                         <div class="terminal-body">
                             <div class="terminal-line">
                                 <span class="terminal-prompt">→</span>
                                 <span class="terminal-command">whoami</span>
                             </div>
-                            <div class="terminal-output">Builder | AI | Automation | Systems</div>
+                            <div class="terminal-output"> AI | Automation | Systems</div>
 
                             <div class="terminal-line" style="margin-top: 10px;">
                                 <span class="terminal-prompt">→</span>
@@ -2115,67 +1976,12 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <div class="experience-wrapper">
-            <div class="section-header reveal">
-                <div>
-                    <div class="section-label">04 — Experience</div>
-                    <h2 class="section-title">Career<br>Timeline</h2>
-                </div>
-                <div class="section-count">[ 04 / 05 ]</div>
-            </div>
-            <div class="experience-item reveal">
-                <div class="experience-date">2023 — Present</div>
-                <div class="experience-content">
-                    <h3>Senior AI Engineer</h3>
-                    <div class="experience-company">@ Tech Innovations Inc</div>
-                    <p class="experience-desc">Leading development of autonomous AI agents and LLM-powered applications. Architecting scalable ML infrastructure handling 10M+ daily inferences.</p>
-                    <div class="experience-tech">
-                        <span>LangChain</span>
-                        <span>GPT-4</span>
-                        <span>Kubernetes</span>
-                        <span>Ray</span>
-                    </div>
-                </div>
-            </div>
-            <div class="experience-item reveal">
-                <div class="experience-date">2021 — 2023</div>
-                <div class="experience-content">
-                    <h3>Machine Learning Engineer</h3>
-                    <div class="experience-company">@ DataDriven Labs</div>
-                    <p class="experience-desc">Built and deployed production ML models for computer vision and NLP. Implemented MLOps best practices reducing deployment time by 70%.</p>
-                    <div class="experience-tech">
-                        <span>PyTorch</span>
-                        <span>MLflow</span>
-                        <span>AWS SageMaker</span>
-                        <span>Docker</span>
-                    </div>
-                </div>
-            </div>
-            <div class="experience-item reveal">
-                <div class="experience-date">2019 — 2021</div>
-                <div class="experience-content">
-                    <h3>Data Scientist</h3>
-                    <div class="experience-company">@ Analytics Pro</div>
-                    <p class="experience-desc">Developed predictive models and analytics solutions for Fortune 500 clients. Created recommendation systems and fraud detection algorithms.</p>
-                    <div class="experience-tech">
-                        <span>Python</span>
-                        <span>scikit-learn</span>
-                        <span>Spark</span>
-                        <span>SQL</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section class="section" id="contact">
         <div class="contact-wrapper">
             <div class="section-header reveal" style="justify-content: center; text-align: center;">
                 <div>
-                    <div class="section-label" style="justify-content: center;">05 — Contact</div>
+                    <div class="section-label" style="justify-content: center;">04 — Contact</div>
                     <h2 class="section-title">Let's Build<br>Something Great</h2>
                 </div>
             </div>
@@ -2185,7 +1991,7 @@
                 I'd love to hear from you.
             </p>
             <a href="mailto:hello@sakamaro.dev" class="contact-email reveal magnetic">
-                hello@sakamaro.dev
+                muhammedfaheem1133@gmail.com
             </a>
             <div class="social-links reveal">
                 <a href="https://github.com" target="_blank" class="social-link magnetic"><i class="fab fa-github"></i></a>
@@ -2199,7 +2005,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-text">
-            Designed & Built by <span>Sakamaro</span> © <span id="year"></span>
+            Designed & Built by <span>FAHEEM</span> © <span id="year"></span>
         </div>
         <div class="footer-links">
             <a href="#" class="footer-link">Resume</a>
@@ -2215,7 +2021,7 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
-            }, 2800);
+            }, 1300);
         });
 
         // ============ THREE.JS ADVANCED SCENE ============
@@ -2230,7 +2036,7 @@
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
         // Create particle system with connections
-        const particlesCount = 1500;
+        const particlesCount = 700;
         const particlesGeometry = new THREE.BufferGeometry();
         const posArray = new Float32Array(particlesCount * 3);
         const velocities = [];
@@ -2316,57 +2122,8 @@
 
         camera.position.z = 5;
 
-        // Mouse tracking
-        let mouseX = 0, mouseY = 0;
-        let targetX = 0, targetY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = (e.clientX / window.innerWidth) * 2 - 1;
-            mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
-        });
-
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-
-            targetX += (mouseX - targetX) * 0.02;
-            targetY += (mouseY - targetY) * 0.02;
-
-            // Animate particles
-            particlesMesh.rotation.x += 0.0003;
-            particlesMesh.rotation.y += 0.0005;
-            
-            // Mouse influence on particles
-            particlesMesh.rotation.x += targetY * 0.01;
-            particlesMesh.rotation.y += targetX * 0.01;
-
-            // Update particle positions
-            const positions = particlesGeometry.attributes.position.array;
-            for(let i = 0; i < particlesCount; i++) {
-                positions[i * 3] += velocities[i].x;
-                positions[i * 3 + 1] += velocities[i].y;
-                positions[i * 3 + 2] += velocities[i].z;
-
-                // Boundary check
-                if(Math.abs(positions[i * 3]) > 7.5) velocities[i].x *= -1;
-                if(Math.abs(positions[i * 3 + 1]) > 7.5) velocities[i].y *= -1;
-                if(Math.abs(positions[i * 3 + 2]) > 7.5) velocities[i].z *= -1;
-            }
-            particlesGeometry.attributes.position.needsUpdate = true;
-
-            // Animate shapes
-            shapes.forEach(shape => {
-                shape.mesh.rotation.x += shape.rotSpeed.x;
-                shape.mesh.rotation.y += shape.rotSpeed.y;
-                if(shape.rotSpeed.z) shape.mesh.rotation.z += shape.rotSpeed.z;
-                
-                // Float animation
-                shape.mesh.position.y += Math.sin(Date.now() * 0.001) * 0.002;
-            });
-
-            renderer.render(scene, camera);
-        }
-        animate();
+        // Render once: keep the background atmospheric, but intentionally static.
+        renderer.render(scene, camera);
 
         // Resize handler
         window.addEventListener('resize', () => {
@@ -2375,92 +2132,11 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        // ============ CUSTOM CURSOR ============
-        const cursor = document.getElementById('cursor');
-        const cursorDot = document.getElementById('cursor-dot');
-        let cursorX = 0, cursorY = 0;
-        let dotX = 0, dotY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            cursorX = e.clientX;
-            cursorY = e.clientY;
-        });
-
-        function animateCursor() {
-            dotX += (cursorX - dotX) * 0.5;
-            dotY += (cursorY - dotY) * 0.5;
-            
-            cursor.style.left = cursorX - 12 + 'px';
-            cursor.style.top = cursorY - 12 + 'px';
-            
-            cursorDot.style.left = dotX - 2 + 'px';
-            cursorDot.style.top = dotY - 2 + 'px';
-            
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
-        // Cursor interactions
-        const hoverElements = document.querySelectorAll('a, button, .skill-card, .project-card, .social-link, .tech-item');
-        hoverElements.forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
-        });
-
-        document.addEventListener('mousedown', () => cursor.classList.add('clicking'));
-        document.addEventListener('mouseup', () => cursor.classList.remove('clicking'));
-
-        // ============ MAGNETIC EFFECT ============
-        const magneticElements = document.querySelectorAll('.magnetic');
-        magneticElements.forEach(el => {
-            el.addEventListener('mousemove', (e) => {
-                const rect = el.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-                el.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-            });
-            
-            el.addEventListener('mouseleave', () => {
-                el.style.transform = 'translate(0, 0)';
-            });
-        });
-
-        // ============ TYPING EFFECT ============
-        const texts = [
-            'Building AI Systems',
-            'Automating Workflows',
-            'Breaking Down Complex Problems',
-            'Learning by Building',
-            'Turning Ideas into Products'
-        ];
-        let textIndex = 0, charIndex = 0, isDeleting = false;
+        // ============ HERO SUBTITLE ============
         const typedElement = document.getElementById('typed-text');
-
-        function typeEffect() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                typedElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typedElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            let speed = isDeleting ? 30 : 80;
-
-            if (!isDeleting && charIndex === currentText.length) {
-                speed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-                speed = 500;
-            }
-
-            setTimeout(typeEffect, speed);
+        if (typedElement) {
+            typedElement.textContent = 'Building AI Systems & Automation';
         }
-        typeEffect();
 
         // ============ NAVBAR SCROLL ============
         const navbar = document.getElementById('navbar');
@@ -2481,41 +2157,12 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
+                    entry.target.classList.add('visible');
                 }
             });
         }, observerOptions);
 
         document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
-
-        // ============ COUNTER ANIMATION ============
-        const counters = document.querySelectorAll('[data-count]');
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const target = parseInt(entry.target.getAttribute('data-count'));
-                    let count = 0;
-                    const duration = 2000;
-                    const increment = target / (duration / 16);
-                    
-                    const updateCount = () => {
-                        if (count < target) {
-                            count += increment;
-                            entry.target.textContent = Math.ceil(count);
-                            requestAnimationFrame(updateCount);
-                        } else {
-                            entry.target.textContent = target;
-                        }
-                    };
-                    updateCount();
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        counters.forEach(counter => counterObserver.observe(counter));
 
         // ============ SMOOTH SCROLL ============
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2528,45 +2175,6 @@
             });
         });
 
-        // ============ PARALLAX SCROLL EFFECT ============
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            const shapes3d = document.querySelectorAll('.skill-card, .project-card');
-            
-            shapes3d.forEach((el, i) => {
-                const speed = 0.02 * (i + 1);
-                const yPos = scrolled * speed;
-                el.style.transform = `translateY(${-yPos}px)`;
-            });
-        });
-
-        // ============ TILT EFFECT ON CARDS ============
-        const cards = document.querySelectorAll('.project-card, .skill-card');
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
-                
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-            });
-        });
-
-        // ============ INTERSECTION ANIMATION FOR TECH ITEMS ============
-        const techItems = document.querySelectorAll('.tech-item');
-        techItems.forEach((item, i) => {
-            item.style.transitionDelay = `${i * 50}ms`;
-        });
     </script>
 </body>
 </html>
